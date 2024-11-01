@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forum</title>
+    <link rel="stylesheet" href="Home_kh.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .forum_content{
+        width: 80%;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: whitesmoke;
+        opacity: 70%;
+
+      }
+      
+      h1 {
+        margin: 0;
+        padding: 20px;
+        background-color: goldenrod;
+        color: black;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      .posts {
+        margin-top: 20px;
+      }
+
+      .post {
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+      }
+
+      .post-title {
+        margin: 0 0 10px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .post-content {
+        margin: 0;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title1">
+      <h2 class="title2"><img src="Flag_of_Cambodia.svg" alt="flag" height="30" width="60" loading="lazy" decoding="async"> BIU Handmade Pro:<br><em><small style="font-size: 16px; color: rgb(83, 4, 4);">លក់ផលិតផលខ្មែរដែលមានគុណភាពខ្ពស់</small></em></h2>
+      </div>
+      <nav class="nav1">
+      <div class="dropdown-vertically">
+              <ul>
+                  <li><a href="Home_kh.html"><i class='bx bx-home-heart'style="color:rgb(230, 215, 19); margin: 0;"></i>ទំព័រដើម</a></li>
+                  <li><a href="about_us_kh.html"><i class='bx bx-smile' style="color:rgb(230, 215, 19); margin: 0;"></i>អំពីយើងខ្ញុំ</a></li>
+                  <li><a href="Gallery_kh.html"><i class='bx bxl-product-hunt'style="color:rgb(230, 215, 19); margin: 0;"></i>ផលិតផល</a>
+                      <ul>
+                          <li><a href="Gallery_kh.html#Sil_Pro" >ផលិតផលធ្វើអំពីប្រាក់</a></li>
+                          <li><a href="Gallery_kh.html#Nat_Pro" >ផលិតផលធ្វើឬស្សីផ្តៅ</a></li>
+                          <li><a href="Gallery_kh.html#Woo_Pro" >ផលិតផលចម្លាក់ឈើ</a></li>
+                          <li><a href="Gallery_kh.html#Sto_Pro" >ផលិតផលចម្លាក់ថ្ម</a></li>
+                          <li><a href="Gallery_kh.html#Tex_Pro" >ផលិតផលតម្បាញ</a></li>
+                          <li><a href="Gallery_kh.html#Cer_Pro" >ផលិតផលស្មូន</a></li>
+                      </ul></li>
+                  <li><a href="Contactus_kh.html"><i class='bx bxs-contact'style="color:rgb(230, 215, 19); margin: 0;"></i>ទំនាក់ទំនង</a></li>
+                  <li><a href="Forum_kh.html"><i class='bx bx-question-mark'style="color:rgb(230, 215, 19); margin: 0;"></i>វេទិកា</a></li>
+                  <li><a href="Forum.html"><i class='bx bx-chevrons-right' style="color:rgb(230, 215, 19); margin: 0;"></i>English</a></li>
+              </ul>
+      </div>
+    </nav>
+    
+    <div>
+        <img src="home3.jpg" alt="silkpic" id="forum_img" width="90%" height="300px" style="margin-top: 5%; margin-left: 4.5%; border: none; border-radius: 10px;">
+    </div>
+
+    <div class="forum_content">
+        <h1>FORUM</h1>
+        <section class="post_form">
+            <h2>Create a New Post</h2>
+            <form id="new-post-form">
+                <div class="post_title">
+                <label for="post-title">Title</label>
+                <input type="text" id="post-title" name="title" required>
+                </div>
+                <div class="post_content">
+                <label for="post-content">Content</label>
+                <textarea id="post-content" name="content" rows="5" required></textarea>
+                </div>
+                <button type="submit">Post</button>
+            </form>
+        </section>
+    <section class="posts">
+        <h2>Posts</h2>
+        <div class="post" id="post-template" style="display: none;">
+            <h3 class="post-title"></h3>
+            <p class="post-content"></p>
+        </div>
+    </section>
+    </div>
+    
+    <script>
+      document
+        .getElementById("new-post-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const title = document.getElementById("post-title").value;
+          const content = document.getElementById("post-content").value;
+
+          const postTemplate = document.getElementById("post-template");
+          const newPost = postTemplate.cloneNode(true);
+
+          newPost.style.display = "block";
+          newPost.querySelector(".post-title").textContent = title;
+          newPost.querySelector(".post-content").textContent = content;
+
+          document.querySelector(".posts").appendChild(newPost);
+
+          document.getElementById("new-post-form").reset();
+        });
+    </script>
+
+    <footer class="footer">
+      <div>
+        <h4>ទំនាក់ទំនងតាមអាសយដ្ឋានដូចខាងក្រោម៖</h4>
+            <ul>
+                <li>ផ្ទះលេខ១២៣ ផ្លូវលេខ ២០០០ សង្កាត់បឹងកេងកង<br>ខណ្ឌបឹងកេងកង​ រាជធានីភ្នំពេញ<br>ព្រះរាជាណាចក្រកម្ពុជា </li>
+                <li><a href="Tel://1234567890">+1234567890</a></li>
+                <li><a href="mailto:info@gmail.com">info@gmail.com</a></li>
+                <li><a href="http://http://biuhandmadepro.com.kh">www.biuhandmadepro.com.kh</a></li>
+            </ul>
+    </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="Home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+
+.Log_Sign{
+    display: flex;
+    justify-content: space-between;
+    opacity: 70%;    
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+    column-gap: 10%;
+}
+
+.log_in{
+    background: whitesmoke;
+    border-radius: 8px;
+    padding: 20px;
+    width: 50%;
+    
+}
+.log_in h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.log_in label{
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.log_in input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.log_in button{
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #5cb85c;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+.log_in button:hover{
+    background-color: #4cae4c;
+}
+
+.sign_up{
+    background: whitesmoke;
+    border-radius: 8px;
+    padding: 20px;
+    width: 50%;    
+}
+.sign_up h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.sign_up label{
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.sign_up input{
+    width: calc(100% - 80px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.sign_up button{
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+.sign_up button:hover{
+    background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+            <div id="title1">
+            <h2 class="title2"><img src="Flag_of_Cambodia.svg" alt="flag" height="32" width="60" loading="lazy" decoding="async"> BIU Handmade Pro:<br><em><small style="font-size: 22px; color: rgb(83, 4, 4);">Selling the Cambodian Premium Handmade Products</small></em></h2>
+            </div>
+            <nav class="nav1">
+            <div class="dropdown-vertically">
+                    <ul>
+                        <li><a href="Home.html"><i class='bx bx-home-heart'style="color:rgb(230, 215, 19); margin: 0;"></i>Home</a></li>
+                        <li><a href="about_us.html"><i class='bx bx-smile' style="color:rgb(230, 215, 19); margin: 0;"></i>About Us</a></li>
+                        <li><a href="Gallery.html"><i class='bx bxl-product-hunt'style="color:rgb(230, 215, 19); margin: 0;"></i>Gallery</a>
+                            <ul>
+                                <li><a href="Gallery.html#Sil_Pro" >Silver Products</a></li>
+                                <li><a href="Gallery.html#Nat_Pro" >Natural Fiber Products</a></li>
+                                <li><a href="Gallery.html#Woo_Pro" >Wooden Products</a></li>
+                                <li><a href="Gallery.html#Sto_Pro" >Stone Products</a></li>
+                                <li><a href="Gallery.html#Tex_Pro" >Textile Products</a></li>
+                                <li><a href="Gallery.html#Cer_Pro" >Ceramic Products</a></li>
+                            </ul></li>
+                        <li><a href="Contactus.html"><i class='bx bxs-contact'style="color:rgb(230, 215, 19); margin: 0;"></i>Contact us</a></li>
+                        <li><a href="Forum.html"><i class='bx bx-question-mark'style="color:rgb(230, 215, 19); margin: 0;"></i>Forum</a></li>
+                    </ul>
+            </div>
+        </nav>
+    <div>
+            <img src="home4.jpg" alt="silkpic" width="90%" height="400px" style="margin-top: 5%; margin-left: 4.5%; border: none; border-radius: 10px;">
+    </div>
+    
+    <div class="Log_Sign">
+        <div class="log_in">
+            <h2>LOGIN</h2>
+            <form action="/login" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" required>
+                <button type="submit" > Login</button>
+            </form>
+        </div>
+
+        <div class="sign_up">
+            <h2>SIGN UP</h2>
+            <form action="/signup" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" required>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="text" id="confirm-password" name="confirm-password" required>
+                <button type="submit">Sign Up</button>
+
+            </form>
+        </div>
+     </div>
+     <div class="container">
+        <h2>Contact Us</h2>
+        <form action="/submit_contact_form" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+        <div class="contact-info">
+            <p><strong>Our Address:</strong></p>
+            <p>1234 Street Name, City, Country</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> info@example.com</p>
+        </div>
+    </div>
+     <footer class="footer">
+        <div>
+            <h4>CONTACT INFORMATION:</h4>
+                <ul>
+                    <li>#123, street.2000, Sangkat Boeung Keng Kang<br>Boeung Keng Kang District, Phnom Penh<br>Cambodia. </li>
+                    <li><a href="Tel://1234567890">+1234567890</a></li>
+                    <li><a href="mailto:info@gmail.com">info@gmail.com</a></li>
+                    <li><a href="http://http://biuhandmadepro.com.kh">www.biuhandmadepro.com.kh</a></li>
+                </ul>
+        </div>
+        </footer>
+</body>
+</html>                          

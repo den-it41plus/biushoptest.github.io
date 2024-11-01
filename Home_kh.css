@@ -1,0 +1,153 @@
+*{
+  margin: 0;
+  padding: 6px;
+}
+
+body{
+  background-image: url(silkbg4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body a{
+
+  width: 110px;
+  text-align: center; 
+  
+}
+@font-face {
+  font-family: KhmerMool1;
+  src: url(fonts/KHMMOOL1.ttf);
+}
+@font-face {
+  font-family: KhmerOSContent;
+  src: url(fonts/KhmerOScontent.ttf);
+}
+@font-face {
+  font-family: Battambang;
+  src: url(fonts/KhmerOSbattambang.ttf);
+}
+#title1 .title2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    color: goldenrod;
+    border: 3px solid goldenrod;
+    border-radius: 20px;
+    padding: 2px;
+    box-shadow: 10px 5px 10px lightgoldenrodyellow;
+    background-color: beige;
+    width: 320px;
+    float: left;
+    font-size: 18px;
+    text-align: center;
+    font-family: KhmerOSContent;  
+  }
+  
+
+
+  .dropdown-vertically ul{
+    list-style: none;
+    float: right;
+    border-radius: 20px;
+    font-family: KhmerMool1;    
+}
+.dropdown-vertically ul > li {
+    position: relative;
+    font-size: 15px;
+    float: left;
+    background: beige;
+    
+}
+
+.dropdown-vertically ul > li > a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    text-align: center;
+    
+}
+
+.dropdown-vertically ul > li:hover > a {
+    background: lightskyblue;
+    color: whitesmoke;
+    border-radius: 60px;
+}
+
+.dropdown-vertically ul ul {
+    position: absolute;
+    top: 89%;
+    left: 0;
+    visibility: hidden;
+    border: none;
+    
+}
+.dropdown-vertically ul ul li a {
+   padding: 15px;
+   width: 150px; 
+   text-align: left;
+   font-size: 16px;
+   
+}
+
+.dropdown-vertically ul > li:hover > ul,
+.dropdown-vertically ul ul > li:hover {
+    visibility: visible;
+}
+
+img {
+  -webkit-filter: opacity(30%); /* Safari 6.0 - 9.0 */
+  filter: opacity(70%);
+  border: 1px solid #ddd;
+  border-radius: 20%;
+  padding: 5px;
+  margin: 15px 25px;
+}
+.img-group1{
+  display: table;
+  float: left;
+  text-align: center;
+  margin-top: 2%;
+  
+}
+
+img:hover{
+  -webkit-filter:none; /* Safari 6.0 - 9.0 */
+  filter:none;
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  transform: scale(1.1);
+}
+
+#contact_img{
+  -webkit-filter:none; /* Safari 6.0 - 9.0 */
+  filter:none;
+  box-shadow: none;
+  transform: none;
+}
+#forum_img{
+  -webkit-filter:none; /* Safari 6.0 - 9.0 */
+  filter:none;
+  box-shadow: none;
+  transform: none;
+}
+#about_img{
+  -webkit-filter:none; /* Safari 6.0 - 9.0 */
+  filter:none;
+  box-shadow: none;
+  transform: none;
+}
+.footer{
+  float: left;
+  margin-left: 30px;
+  font-weight: 50px;
+  font-size: 14px;
+  color: yellow;  
+  margin-left: 38%;
+  font-family: Battambang;
+}
+.footer ul{
+  list-style-type: none;
+  
+}
